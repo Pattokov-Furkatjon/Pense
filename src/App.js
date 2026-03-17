@@ -1,5 +1,6 @@
 import './App.css';
 import './styles/main.css';
+import { HashRouter as Router,Routes,Route } from "react-router-dom";
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -15,21 +16,27 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="app-root">
-      <Navbar />
-      <main>
-        <Hero />
-        <DashboardPreview />
-        <Features />
-        <HowItWorks />
-        <Statistics />
-        <Pricing />
-        <Testimonials />
-        <Integrations />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={
+             <>
+              <Navbar />
+              <Hero />
+              <DashboardPreview />
+              <Features />
+              <HowItWorks />
+              <Statistics />
+              <Pricing />
+              <Testimonials />
+              <Integrations />
+              <CTA />
+              <Footer />
+             </>
+          } />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

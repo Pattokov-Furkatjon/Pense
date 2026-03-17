@@ -1,8 +1,8 @@
 {
-  "name": "red",
+  "name": "pense",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Pattokov-Furkatjon/Pense.git",
+  "homepage": "https://Pattokov-Furkatjon.github.io/Pense",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -12,6 +12,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
+    "react-router-dom": "^7.13.1",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.8",
     "web-vitals": "^2.1.4"
@@ -19,14 +20,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   },
   "browserslist": {
     "production": [
