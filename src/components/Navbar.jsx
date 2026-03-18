@@ -24,10 +24,13 @@ function Navbar() {
 
   const closeMenu = useCallback(() => setOpen(false), []);
 
-  const handleNavClick = useCallback((id) => {
-    scrollToSection(id);
-    closeMenu();
-  }, [closeMenu]);
+  const handleNavClick = useCallback(
+    (id) => {
+      scrollToSection(id);
+      closeMenu();
+    },
+    [closeMenu],
+  );
 
   useEffect(() => {
     if (!open) return undefined;
@@ -52,6 +55,7 @@ function Navbar() {
         <button type="button" className="nav__logo" onClick={() => handleNavClick('hero')}>
           Pense
         </button>
+
         <nav className="nav__links" aria-label="Primary navigation">
           {items.map((item) => (
             <button
@@ -64,6 +68,7 @@ function Navbar() {
             </button>
           ))}
         </nav>
+
         <button
           type="button"
           className="nav__toggle"
@@ -78,14 +83,12 @@ function Navbar() {
             <span />
           </span>
         </button>
-        <button
-          type="button"
-          className="nav__cta"
-          onClick={() => handleNavClick('cta')}
-        >
+
+        <button type="button" className="nav__cta" onClick={() => handleNavClick('cta')}>
           Request a demo
         </button>
       </div>
+
       <button
         type="button"
         className={`nav__backdrop${open ? ' nav__backdrop--open' : ''}`}
@@ -93,6 +96,7 @@ function Navbar() {
         tabIndex={-1}
         onClick={closeMenu}
       />
+
       <div
         id={menuId}
         className={`nav__mobile${open ? ' nav__mobile--open' : ''}`}
@@ -112,7 +116,11 @@ function Navbar() {
               {item.label}
             </button>
           ))}
-          <button type="button" className="btn btn--primary nav__mobile-cta" onClick={() => handleNavClick('cta')}>
+          <button
+            type="button"
+            className="btn btn--primary nav__mobile-cta"
+            onClick={() => handleNavClick('cta')}
+          >
             Request a demo
           </button>
         </div>
@@ -122,4 +130,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

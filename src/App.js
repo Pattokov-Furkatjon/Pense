@@ -22,17 +22,17 @@ function App() {
             path="/"
             element={
               <>
-              <Navbar />
-              <Hero />
-              <DashboardPreview />
-              <Features />
-              <HowItWorks />
-              <Statistics />
-              <Pricing />
-              <Testimonials />
-              <Integrations />
-              <CTA />
-              <Footer />
+                <Navbar />
+                <Hero />
+                <DashboardPreview />
+                <Features />
+                <HowItWorks />
+                <Statistics />
+                <Pricing />
+                <Testimonials />
+                <Integrations />
+                <CTA />
+                <Footer />
               </>
             }
           />
