@@ -1,6 +1,5 @@
-import './App.css';
 import './styles/main.css';
-import { HashRouter as Router,Routes,Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -17,10 +16,12 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app-root">
         <Routes>
-          <Route path="/" element={
-             <>
+          <Route
+            path="/"
+            element={
+              <>
               <Navbar />
               <Hero />
               <DashboardPreview />
@@ -32,8 +33,9 @@ function App() {
               <Integrations />
               <CTA />
               <Footer />
-             </>
-          } />
+              </>
+            }
+          />
         </Routes>
       </div>
     </Router>
